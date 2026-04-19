@@ -34,7 +34,7 @@ if st.button("Predict"):
         X = np.array([[hours]])
         predictions = model.predict(X)
         predictions = predictions[0]  # getting answer not in array form
-        st.success(f"✅ Predicted Marks : {predictions}")
+        st.success(f"✅ Predicted Marks : {predictions:.2f}")
         st.write("⛔️ Note : This is ML Model Prediction **Result May Vary**")
     except Exception as e:
         st.error(f"Prediction Failed : {e}")
